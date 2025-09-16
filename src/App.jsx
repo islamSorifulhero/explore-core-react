@@ -2,14 +2,41 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ToDo from './Todo';
+import Actor from './Actor';
+import Singer from './Singer';
 
 function App() {
   const [count, setCount] = useState(0)
 
+  // const actors = ['Bappa Raj', 'Omar Sunny', 'Salman Shah', 'Jasim', 'Anower', 'Rajjak']
+
+  // const time = 50;
+
+  const singers = [
+    {id: 1, name: 'Dr. Mahfuz', age: 68},
+    {id: 2, name: 'Tahsan', age: 45},
+    {id: 3, name: 'shuvro Deb', age: 57}
+  ];
+
   return (
     <>
-      <h1>React-Core-Concept</h1>
-      <Student></Student>
+      <p>React-Core-Concept</p>
+
+      {
+        singers.map(singer => <Singer key ={singer.id} singer ={singer}></Singer>)
+      }
+
+      {/* {
+        actors.map(actor => <Actor actor={actor}></Actor>)
+      } */}
+
+
+      {/* <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      <ToDo task="Revise JS" isDone={false}></ToDo>
+      <ToDo task="Take a shower" isDone={true} time="100"></ToDo> */}
+
+      {/* <Student></Student>
       <Department name="Mozumder" teck="Javascript"></Department>
       <Department name="Rajon" teck="React"></Department>
       <Department name="Shabana" teck="Java"></Department>
@@ -24,7 +51,7 @@ function App() {
       <Mobile name='vivo-y51' price="29,000"></Mobile>
       <Book subject="English" mullo="300" lekhok='Munjerin Shahid'></Book>
       <Book subject="Bangla" mullo='200' lekhok='Abdul-Batin'></Book>
-      <Book subject="Math" mullo='350' lekhok='Ketab-uddin'></Book>
+      <Book subject="Math" mullo='350' lekhok='Ketab-uddin'></Book> */}
     </>
   )
 }
